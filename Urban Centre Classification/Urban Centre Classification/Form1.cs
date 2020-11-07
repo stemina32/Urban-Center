@@ -105,34 +105,33 @@ namespace Urban_Centre_Classification
         {
             try
             {
-                int population, total = 0; //Variables for population and total population
-                int average = 0; 
-                StreamReader sr = File.OpenText("Urban Center.Txt");
-                StreamReader inputFile;
-                inputFile = File.OpenText("Urban Center.Txt");
-
                 // counter for not empty or commented lines
-                var lineCount = 0;
+                var urbCenterCount = 0;
+                List<string> names = new List<string>();
+                List<int> populations = new List<int>();
+
                 var lines = File.ReadAllLines("Urban Center.Txt").Where(x => !string.IsNullOrWhiteSpace(x)).ToList();
                 foreach (var line in lines)
                 {
                     if (!line.StartsWith("#"))
                     {
-                        lineCount++;
+                        urbCenterCount++;
+                        names.Add(line.Split(',')[0]);
+                        populations.Add(Convert.ToInt32(line.Split(',')[1]));
                     }
                 }
 
-                numberUrbanLabel.Text = lineCount.ToString();
+                var totalPop = populations.Sum();
+                var averagePop = Math.Round(populations.Average());
+                var largestPop = populations.Max();
+                var smallestPop = populations.Min();
 
-                while (!inputFile.EndOfStream)
-                { 
-                    population = int.Parse(inputFile.ReadLine());
-                    total += population;
-                    average = total / lineCount;
-                    averageLabel.Text = average.ToString();
-                }
-                inputFile.Close();
-                
+                // assign value to labels
+                numberUrbanLabel.Text = urbCenterCount.ToString();
+                totalLabel.Text = totalPop.ToString();
+                averageLabel.Text = averagePop.ToString();
+                largestLabel.Text = largestPop.ToString();
+                smallestLabel.Text = smallestPop.ToString();
             }
             catch(Exception ex)
             {
