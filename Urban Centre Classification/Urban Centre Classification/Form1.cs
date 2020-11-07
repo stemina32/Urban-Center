@@ -110,11 +110,18 @@ namespace Urban_Centre_Classification
                 StreamReader sr = File.OpenText("Urban Center.Txt");
                 StreamReader inputFile;
                 inputFile = File.OpenText("Urban Center.Txt");
-                int lineCount = 0; //Variable to determine the number of Urban Centers (1 per line)
-                while (sr.ReadLine() != null)
+
+                // counter for not empty or commented lines
+                var lineCount = 0;
+                var lines = File.ReadAllLines("Urban Center.Txt").Where(x => !string.IsNullOrWhiteSpace(x)).ToList();
+                foreach (var line in lines)
                 {
-                    lineCount ++ ;
+                    if (!line.StartsWith("#"))
+                    {
+                        lineCount++;
+                    }
                 }
+
                 numberUrbanLabel.Text = lineCount.ToString();
 
                 while (!inputFile.EndOfStream)
@@ -131,6 +138,11 @@ namespace Urban_Centre_Classification
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void urbanListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
