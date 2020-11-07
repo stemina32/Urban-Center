@@ -1,0 +1,10 @@
+C:\Users\Celestin\Documents\BADesign\Urban Centre Classification\Urban Centre Classification\bin\Debug\Urban Centre Classification.exe.config
+C:\Users\Celestin\Documents\BADesign\Urban Centre Classification\Urban Centre Classification\bin\Debug\Urban Centre Classification.exe
+C:\Users\Celestin\Documents\BADesign\Urban Centre Classification\Urban Centre Classification\bin\Debug\Urban Centre Classification.pdb
+C:\Users\Celestin\Documents\BADesign\Urban Centre Classification\Urban Centre Classification\obj\Debug\Urban Centre Classification.csprojAssemblyReference.cache
+C:\Users\Celestin\Documents\BADesign\Urban Centre Classification\Urban Centre Classification\obj\Debug\Urban_Centre_Classification.Form1.resources
+C:\Users\Celestin\Documents\BADesign\Urban Centre Classification\Urban Centre Classification\obj\Debug\Urban_Centre_Classification.Properties.Resources.resources
+C:\Users\Celestin\Documents\BADesign\Urban Centre Classification\Urban Centre Classification\obj\Debug\Urban Centre Classification.csproj.GenerateResource.cache
+C:\Users\Celestin\Documents\BADesign\Urban Centre Classification\Urban Centre Classification\obj\Debug\Urban Centre Classification.csproj.CoreCompileInputs.cache
+C:\Users\Celestin\Documents\BADesign\Urban Centre Classification\Urban Centre Classification\obj\Debug\Urban Centre Classification.exe
+C:\Users\Celestin\Documents\BADesign\Urban Centre Classification\Urban Centre Classification\obj\Debug\Urban Centre Classification.pdb

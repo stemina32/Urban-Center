@@ -1,0 +1,15 @@
+# Source: Mauritius - 10 Largest Cities, https://www.geonames.org/MU/largest-cities-in-mauritius.html
+Port Louis, 155226
+Beau Bassin-Rose Hill, 111355
+Vacoas, 110000	
+Curepipe, 84200	
+Quatre Bornes, 80961
+Triolet, 23269
+Goodlands, 20910
+Centre de Flacq, 17710
+Bel Air RiviÃ¨re SÃ¨che, 17671
+MahÃ©bourg, 17042
+Saint Pierre, 16414
+Bambous, 15345
+
+phoenix,5000
