@@ -76,29 +76,20 @@ namespace Urban_Centre_Classification
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            File.WriteAllLines("Urban Center.txt",
-            File.ReadLines("Urban Center.txt").Where(l => l == nameTextBox.Text).ToList());
-           /* string tempFile = "temp.txt";
 
+            int lineIndex = urbanListBox.SelectedIndex;
+            int fileSize = File.ReadAllLines("Urban Center.txt").Count();
+            string deletedLine;
 
-               try
-               {
-
-               }
-               catch(Exception ex)
-               {
-
-               }
-               /*StreamReader inputFile;
-               inputFile = File.OpenText("Urban Center.txt");
-               StreamWriter onputFile;
-               while((line = inputFile.ReadLine()) != null)
-               {
-                   if(line == "nameTextBox.Text")
-               }*/
-            urbanListBox.Items.RemoveAt(urbanListBox.SelectedIndex);
-            StreamWriter outputFile;
-           //while ()
+            if (lineIndex >= 0 && lineIndex < fileSize)
+            {
+                urbanListBox.Items.RemoveAt(lineIndex);
+                List<string> linesList = File.ReadAllLines("Urban Center.txt").ToList();
+                deletedLine = linesList[lineIndex].Trim();
+                linesList.RemoveAt(lineIndex);
+                File.WriteAllLines("Urban Center.txt", linesList.ToArray());
+                File.AppendAllText("logs.txt", "Deleted : \"" + deletedLine + "\" at " + DateTime.Now.ToString() + Environment.NewLine);
+            }
         }
 
         private void calculationButton_Click(object sender, EventArgs e)
