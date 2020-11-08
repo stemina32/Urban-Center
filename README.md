@@ -4,7 +4,7 @@
 References:
 
 
-Gaddis, Tony. Starting Out with Visual C# 2012, Global Edition. Harlow, United Kingdom: Pearson Education Limited
+Gaddis, Tony. 2012. Starting Out with Visual C# 2012, Global Edition. Harlow, United Kingdom: Pearson Education Limited
 
 https://docs.microsoft.com/en-us/dotnet/visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter
 
