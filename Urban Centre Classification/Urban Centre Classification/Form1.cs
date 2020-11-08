@@ -53,19 +53,23 @@ namespace Urban_Centre_Classification
         {
             try
             {
+                //Add Urban Name & Population in "x,y" format to file
                 StreamWriter outputFile; //declare StreamWriter
                 outputFile = File.AppendText("Urban Center.txt"); //Open File + Get Object for appending
-                outputFile.Write( "\n" + nameTextBox.Text); //Get data from textboxes to write in file
+                outputFile.Write(nameTextBox.Text); //Get data from textboxes to write in file
                 outputFile.Write("," + populationTextBox.Text);
-                //outputFile.Write("," + locationTextBox.Text);
 
                 outputFile.Close(); //close file
 
                 MessageBox.Show("Urban Center data added!"); // notification to user
+                int fileSize = File.ReadAllLines("Urban Center.txt").Count();
+                //Log Added Data into Log.txt file
+                List<string> linesList = File.ReadAllLines("Urban Center.txt").ToList();
+                File.WriteAllLines("Urban Center.txt", linesList.ToArray());
+                File.AppendAllText("logs.txt", "Added : \"" + nameTextBox.Text + "," + populationTextBox.Text + "\" at " + DateTime.Now.ToString() + Environment.NewLine);
 
                 nameTextBox.Text = ""; //Clear TextBox
                 populationTextBox.Text = ""; //Clear TextBox
-                locationTextBox.Text = ""; //Clear TextBox
                 nameTextBox.Focus(); // Cursor back to nameTextBox 
             }
             catch(Exception ex)
